@@ -1,0 +1,13 @@
+;es-AR;en-US
+hello;Hola!;Hi!
+my-name;Mi nombre es Carlos;My name is Charly
+change;Cambiar;Change
+ugui-title-1;Ejemplo de Autotraducción de uGUI;uGUI Autotranslation Example
+ugui-title-2;Ejemplo de Traducción Manual de uGUI;uGUI Manual Translation Exanple
+ugui-desc-1;Simplemente escriba entre {} el código de la palabra;Just write inside {} the word's code
+ugui-desc-2;Traduzca manualmente cada elemento usando el script "Auto Translator Info";Translate every element manually using the "Auto Translation Info" script
+option-a;Opción A;Option A
+option-b;Opción B;Option B
+option-c;Opción C;Option C
+multilanguage-title;Ejemplo multi-idioma;Multilanguage example
+welcome;Bienvenido/a;Welcome

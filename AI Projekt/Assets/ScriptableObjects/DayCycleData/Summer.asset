@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bcd8b5abf8b12143b290e05cb488e83, type: 3}
+  m_Name: Summer
+  m_EditorClassIdentifier: 
+  timeUnits:
+  - hour: 0
+    color:
+      serializedVersion: 2
+      rgba: 16777215
+    light: 0.1
+  - hour: 4
+    color:
+      serializedVersion: 2
+      rgba: 16777215
+    light: 0.15
+  - hour: 8
+    color:
+      serializedVersion: 2
+      rgba: 16777215
+    light: 0.901
+  - hour: 12
+    color:
+      serializedVersion: 2
+      rgba: 16777215
+    light: 0.974
+  - hour: 16
+    color:
+      serializedVersion: 2
+      rgba: 16777215
+    light: 1
+  - hour: 20
+    color:
+      serializedVersion: 2
+      rgba: 16777215
+    light: 0.966

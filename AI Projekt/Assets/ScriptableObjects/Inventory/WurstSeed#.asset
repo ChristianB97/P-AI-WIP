@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb54e972a288a6e49b84f6daf238c6b5, type: 3}
+  m_Name: WurstSeed#
+  m_EditorClassIdentifier: 
+  itemName: Wurst Seed
+  picture: {fileID: 2667589067915142571, guid: 7fd8327bdfef52347bb9d36decf1b0ca, type: 3}
+  description: 'Seeds to plant Wurst.
+
+    Contains traces of stone!'
+  plantStages:
+  - stageSprite: {fileID: -7457578478942913182, guid: 538257727c078e645979c91d2710815b,
+      type: 3}
+    daysUntilGrowth: 1
+  - stageSprite: {fileID: 2667589067915142571, guid: 7fd8327bdfef52347bb9d36decf1b0ca,
+      type: 3}
+    daysUntilGrowth: 1
+  isProductRegrowthable: 1

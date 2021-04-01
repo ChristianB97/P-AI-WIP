@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<root>
+	<spec-version>1</spec-version>
+	<language name='es-AR' title='es-AR'>
+		<word name='hello'>¡Hola mundo!</word>
+		<word name='my-lang-is'>Mi idioma es {0}</word>
+		<word name='change'>Cambiar</word>
+		<word name='html-text'>
+			<![CDATA[<span>Este es un texto con <b color="red">HTML</b></span>\nTambién es multilínea.]]>
+		</word>
+	</language>
+</root>

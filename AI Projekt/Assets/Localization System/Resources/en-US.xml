@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<root>
+	<spec-version>1</spec-version>
+	<language name='en-US' title='en-US'>
+		<word name='hello'>¡Hello word!</word>
+		<word name='my-lang-is'>My language is {0}</word>
+		<word name='change'>Change</word>
+		<word name='html-text'>
+			<![CDATA[<b>This is a text with <color=#ff0000>HTML</color></b>\nAlso is multiline.]]>
+		</word>
+	</language>
+</root>

@@ -1,0 +1,10 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<root>
+	<!-- Document format -->
+	<spec-version>1</spec-version>
+	<!-- References -->
+	<languages>
+		<language file='en-US' code='en-US' />
+		<language file='es-AR' code='es-AR' />
+	</languages>
+</root>
