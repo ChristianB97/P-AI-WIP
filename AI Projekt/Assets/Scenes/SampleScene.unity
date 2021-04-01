@@ -2722,7 +2722,6 @@ GameObject:
   - component: {fileID: 519420035}
   - component: {fileID: 519420036}
   - component: {fileID: 519420033}
-  - component: {fileID: 519420037}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2887,7 +2886,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: becf76d0b8058eb4c947af2013b00430, type: 3}
   m_Name: 
@@ -2910,43 +2909,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
---- !u!114 &519420037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93ec17d69467288449129783f1347f9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  effectTimer: 4.5
-  videoPlayer: {fileID: 519420033}
-  clip:
-  - {fileID: 32900000, guid: 52c7a7a2d5a4c7342bbf5be45c6ed4c3, type: 3}
-  - {fileID: 32900000, guid: fb542b2851b62bb408abddf621063483, type: 3}
-  - {fileID: 32900000, guid: 32288480232c582429fa8817e5b18cd3, type: 3}
-  - {fileID: 32900000, guid: 19f7e6d469e53b940bea4a1a290eb44a, type: 3}
-  - {fileID: 32900000, guid: 6f46ea53368605345ae685510ab6e2e2, type: 3}
-  - {fileID: 32900000, guid: a81ad4c6766b1454db744265a4205982, type: 3}
-  - {fileID: 32900000, guid: 06e71078604c72e40b66cd42f9a1da42, type: 3}
-  - {fileID: 32900000, guid: 5fb005752e9756f42a695d8521c5ba9d, type: 3}
-  - {fileID: 32900000, guid: 72ff50b8dfc0df440918e1290d6f4344, type: 3}
-  - {fileID: 32900000, guid: 0eab14313fbc9ee42a5b853a44467ad6, type: 3}
-  - {fileID: 32900000, guid: 6a6ef6897dfb1e44d82b64e4320a544a, type: 3}
-  - {fileID: 32900000, guid: e127875d9cc262f4991ddb6f8318a15f, type: 3}
-  - {fileID: 32900000, guid: c571a5c404e86064fbf174eef1ee9155, type: 3}
-  - {fileID: 32900000, guid: 9c87f6e9d0fe4554082818d3344937af, type: 3}
-  i: 0
-  material: {fileID: 2100000, guid: c91068c59239e4c4fad91d84a8321a1b, type: 2}
-  rawImage: {fileID: 1661558376}
-  sun: {fileID: 1085531227}
-  time: {fileID: 2126656695}
-  volumeProfile: {fileID: 11400000, guid: bd95a5ce7c67b6a4990edd71ee4789af, type: 2}
-  vandanielStarter: 0
-  defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!224 &528632583 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6225181527242195165, guid: c0abb0a923e87dd4480c45b04915a633,
@@ -6923,7 +6885,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1336912323
 Transform:
   m_ObjectHideFlags: 0
@@ -7573,7 +7535,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1390144638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9853,7 +9815,7 @@ Transform:
   m_GameObject: {fileID: 1719758733}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -10.9, y: 4.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 639777304}
   - {fileID: 1336912323}
@@ -11433,7 +11395,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2000395518}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4, y: -0.2, z: 1}
+  m_LocalPosition: {x: 1.1, y: -0.7, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 435543797}
@@ -20601,7 +20563,7 @@ Tilemap:
       - {fileID: 5068243833400349428, guid: b9dff416484fcc541a48a155f644f27f, type: 3}
       - {fileID: -6892722999707922573, guid: b9dff416484fcc541a48a155f644f27f, type: 3}
       - {fileID: -2260165667914715867, guid: b9dff416484fcc541a48a155f644f27f, type: 3}
-      m_AnimationSpeed: 3.8100002
+      m_AnimationSpeed: 3.81
       m_AnimationTimeOffset: 8.45
       m_IsLooping: 1
   - first: {x: 1, y: 0, z: 0}
@@ -20628,7 +20590,7 @@ Tilemap:
       - {fileID: 5068243833400349428, guid: b9dff416484fcc541a48a155f644f27f, type: 3}
       - {fileID: -6892722999707922573, guid: b9dff416484fcc541a48a155f644f27f, type: 3}
       - {fileID: -2260165667914715867, guid: b9dff416484fcc541a48a155f644f27f, type: 3}
-      m_AnimationSpeed: 3.81
+      m_AnimationSpeed: 3.8100002
       m_AnimationTimeOffset: 8.45
       m_IsLooping: 1
   - first: {x: 1, y: 1, z: 0}
