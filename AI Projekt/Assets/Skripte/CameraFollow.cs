@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class CameraFollow : MonoBehaviour
 {
     [SerializeField]private Transform cameraTransform;
     [SerializeField] private Transform playerTransform;
 
+    TileBase tBase;
     private void Start()
     {
+  
         if (cameraTransform == null)
         {
             cameraTransform = GetComponent<Camera>().transform;

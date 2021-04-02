@@ -76,6 +76,8 @@
     <Compile Include="Assets\Localization System\Editor\XML\XMLEditorManager.cs" />
     <Compile Include="Assets\Localization System\Editor\XML\XmlWordEditorLine.cs" />
     <Compile Include="Assets\Skripte\Dialogue\Editor\DialogueEditor.cs" />
+    <Compile Include="Assets\Skripte\Imported Scripts\Tilemap-Shadow-Caster-main\Editor\PathShadowEditor.cs" />
+    <Compile Include="Assets\Skripte\Imported Scripts\Tilemap-Shadow-Caster-main\Editor\TilemapShadowCaster2DEditor.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

@@ -131,6 +131,10 @@
     <Compile Include="Assets\Skripte\Geheimskript.cs" />
     <Compile Include="Assets\Skripte\Imported Scripts\AnimatedTile.cs" />
     <Compile Include="Assets\Skripte\Imported Scripts\RandomBrush.cs" />
+    <Compile Include="Assets\Skripte\Imported Scripts\ShadowCaster2DExtensions.cs" />
+    <Compile Include="Assets\Skripte\Imported Scripts\Tilemap-Shadow-Caster-main\Runtime\PathShadow.cs" />
+    <Compile Include="Assets\Skripte\Imported Scripts\Tilemap-Shadow-Caster-main\Runtime\TilemapShadowCaster2D.cs" />
+    <Compile Include="Assets\Skripte\Imported Scripts\Tilemap-Shadow-Caster-main\SetTilemapShadows.cs" />
     <Compile Include="Assets\Skripte\Inventory\IGetStorageSlot.cs" />
     <Compile Include="Assets\Skripte\Inventory\IStorageSwap.cs" />
     <Compile Include="Assets\Skripte\Inventory\InventoryActions.cs" />

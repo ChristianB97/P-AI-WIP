@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Wurst
   m_EditorClassIdentifier: 
   itemName: Stone Sausage
-  picture: {fileID: 2667589067915142571, guid: 7fd8327bdfef52347bb9d36decf1b0ca, type: 3}
+  picture: {fileID: 21300000, guid: 64eb96948eb0ee74b8283235fc51dbf7, type: 3}
   description: Yummy Stones
