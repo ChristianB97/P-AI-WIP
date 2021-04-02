@@ -75,7 +75,7 @@
     <Compile Include="Assets\Localization System\Editor\Windows\XMLEditorWindow.cs" />
     <Compile Include="Assets\Localization System\Editor\XML\XMLEditorManager.cs" />
     <Compile Include="Assets\Localization System\Editor\XML\XmlWordEditorLine.cs" />
-    <Compile Include="Assets\Scenes\Skripte\Dialogue\Editor\DialogueEditor.cs" />
+    <Compile Include="Assets\Skripte\Dialogue\Editor\DialogueEditor.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
