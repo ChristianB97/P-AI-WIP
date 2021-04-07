@@ -151,6 +151,16 @@
     <Compile Include="Assets\Skripte\Inventory\PlayerInventoryActions.cs" />
     <Compile Include="Assets\Skripte\Inventory\PlayerStorage.cs" />
     <Compile Include="Assets\Skripte\Inventory\StorageSlot.cs" />
+    <Compile Include="Assets\Skripte\Light\IShadowCastAdder.cs" />
+    <Compile Include="Assets\Skripte\Light\ShadowCastWallAdder.cs" />
+    <Compile Include="Assets\Skripte\Light\ShadowCasterFilllInAdder.cs" />
+    <Compile Include="Assets\Skripte\Light\ShadowCasterGroup.cs" />
+    <Compile Include="Assets\Skripte\Light\ShadowCasterGroupDefiner.cs" />
+    <Compile Include="Assets\Skripte\Light\ShadowCasterInitiator.cs" />
+    <Compile Include="Assets\Skripte\Light\ShadowCasterProfile.cs" />
+    <Compile Include="Assets\Skripte\Light\ShadowCasterWallAdder.cs" />
+    <Compile Include="Assets\Skripte\Light\Tag.cs" />
+    <Compile Include="Assets\Skripte\Light\TagDefiner.cs" />
     <Compile Include="Assets\Skripte\Save\SaveLoadEvent.cs" />
     <Compile Include="Assets\Skripte\Save\SaveLoadStation.cs" />
     <Compile Include="Assets\Skripte\Save\SavingEnvironment.cs" />

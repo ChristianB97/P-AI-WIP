@@ -7,6 +7,7 @@ TagManager:
   - Tiles
   - Sun
   - Item
+  - Walls
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Ignore Light
   - 
   - 
   - 
@@ -46,4 +47,13 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 856511423
+    locked: 0
+  - name: Roof
+    uniqueID: 597337091
+    locked: 0
+  - name: No Local Lights
+    uniqueID: 2718654909
+    locked: 0
+  - name: Y_Sorting_Layer
+    uniqueID: 667457795
     locked: 0

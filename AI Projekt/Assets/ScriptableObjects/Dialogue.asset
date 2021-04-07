@@ -37,17 +37,17 @@ MonoBehaviour:
   m_Name: 9194d25c-bf31-470b-9fda-e8aa96119fbb
   m_EditorClassIdentifier: 
   speech:
-    name: 
+    name: Leorio
     speech:
     - 
   children: []
   usedRect:
     serializedVersion: 2
-    x: 648
-    y: 123
+    x: 644
+    y: 217
     width: 200
     height: 100
-  popUpId: -1
+  popUpId: 1
 --- !u!114 &-7151546807482135020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,8 +68,8 @@ MonoBehaviour:
   - d3e73edc-fa48-4097-bdb9-80ea9e2d5964
   usedRect:
     serializedVersion: 2
-    x: -137
-    y: 193
+    x: 77
+    y: 134
     width: 200
     height: 100
   popUpId: 4
@@ -90,13 +90,16 @@ MonoBehaviour:
     speech:
     - Alles okay mit dir Bruddi? Du machst mir echt Angst!
     - "Schl\xE4fst du genug?"
+    - "Schl\xE4fst du genug?"
+    - "Schl\xE4fst du genug?"
+    - "Schl\xE4fst du genug?"
   children:
   - 96593cbc-51dd-44f7-a536-a5141de56bbd
   - 9194d25c-bf31-470b-9fda-e8aa96119fbb
   usedRect:
     serializedVersion: 2
-    x: 394
-    y: 69
+    x: 383
+    y: 117
     width: 200
     height: 100
   popUpId: 5

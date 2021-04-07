@@ -37,6 +37,10 @@ MonoBehaviour:
     name: Toboto
     picture: {fileID: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
+  - id: 6
+    name: Tobotooooo
+    picture: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
   characterNames:
   - Sebastian
   - Leorio
@@ -44,3 +48,4 @@ MonoBehaviour:
   - Daggie
   - "B\xF6\xDFer Iwan"
   - Toboto
+  - Tobotooooo

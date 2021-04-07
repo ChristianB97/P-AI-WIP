@@ -8,7 +8,7 @@ public class Player_Walk : MonoBehaviour
     [SerializeField] private float sprintAddition = 5;
     private Rigidbody2D rb;
     [SerializeField]private BoolValue boolValue;
-    [SerializeField] private Animator anim;
+    [SerializeField]private Animator anim;
 
     private void Start()
     {
