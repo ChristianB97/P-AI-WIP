@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 
@@ -26,7 +26,7 @@ public class ShadowCasterWallAdder
     public ShadowCaster2D AddLowerWall(List<Vector3> pointsInPath3D, CompositeCollider2D collider)
     {
         List<Vector3> corners = GetCornersStartingFromLowerLeftWithOffset(pointsInPath3D);
-        List<Vector3> lowerWallPoints = new List<Vector3>() { corners[1], corners[1] - WALL_OFFSET_Y, corners[2] - WALL_OFFSET_Y, corners[2] };
+        List<Vector3> lowerWallPoints = new List<Vector3>() { corners[0], corners[0] - WALL_OFFSET_Y, corners[3] - WALL_OFFSET_Y, corners[3] };
         return AddAditionalShadowCasterForWalls(lowerWallPoints, collider);
     }
 
@@ -51,12 +51,13 @@ public class ShadowCasterWallAdder
 
     private ShadowCaster2D AddShadowCaster(List<Vector3> pointsInPath3D, CompositeCollider2D collider)
     {
-        GameObject newShadowCaster = new GameObject("ShadowCaster2D");
+        GameObject newShadowCaster = new GameObject("ShadowCaster2D" + pointsInPath3D.ToString());
         newShadowCaster.isStatic = true;
         newShadowCaster.transform.SetParent(collider.transform, false);
         ShadowCaster2D component = newShadowCaster.AddComponent<ShadowCaster2D>();
-        component.SetPath(pointsInPath3D.ToArray());
-        component.SetPathHash(Random.Range(int.MinValue, int.MaxValue));
+        component.selfShadows = true; //redundant
+        SetPath(component, pointsInPath3D.ToArray());
+        SetPathHash(component, Random.Range(int.MinValue, int.MaxValue));
         return component;
     }
 
@@ -80,5 +81,21 @@ public class ShadowCasterWallAdder
         corners.Add(new Vector3(maxX, maxY, 0));
         corners.Add(new Vector3(maxX, minY, 0));
         return corners;
+    }
+
+    public static void SetPath(ShadowCaster2D shadowCaster, Vector3[] path)
+    {
+        FieldInfo shapeField = typeof(ShadowCaster2D).GetField("m_ShapePath",
+                                                               BindingFlags.NonPublic |
+                                                               BindingFlags.Instance);
+        shapeField.SetValue(shadowCaster, path);
+    }
+
+    public static void SetPathHash(ShadowCaster2D shadowCaster, int hash)
+    {
+        FieldInfo hashField = typeof(ShadowCaster2D).GetField("m_ShapePathHash",
+                                                              BindingFlags.NonPublic |
+                                                              BindingFlags.Instance);
+        hashField.SetValue(shadowCaster, hash);
     }
 }

@@ -5,12 +5,18 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public class ShadowCasterProfile
 {
-    public WallSide wallSide;
+    public ShadowCasterProfileTag Tag { get; private set; }
     public List<ShadowCaster2D> shadowCasters;
 
-    public ShadowCasterProfile(WallSide _wallSide)
+    public ShadowCasterProfile(ShadowCasterProfileTag _tag)
     {
-        wallSide = _wallSide;
+        shadowCasters = new List<ShadowCaster2D>();
+        Tag = _tag;
+    }
+
+    public void AddShadowCaster(ShadowCaster2D shadowCaster)
+    {
+        shadowCasters.Add(shadowCaster);
     }
 
     public void SetShadowCasterActivity(bool value)
@@ -23,12 +29,4 @@ public class ShadowCasterProfile
             }
         }
     }
-}
-
-public enum WallSide
-{
-    Upper,
-    Right,
-    Lower,
-    Left
 }
