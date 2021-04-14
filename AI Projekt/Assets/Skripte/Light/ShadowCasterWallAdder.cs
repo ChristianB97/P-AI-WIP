@@ -70,7 +70,6 @@ public class ShadowCasterWallAdder
         float minY = pointsInPath3D[0].y;
         foreach (Vector3 point in pointsInPath3D)
         {
-            Debug.Log(point);
             maxX = Mathf.Max(maxX, point.x);
             maxY = Mathf.Max(maxY, point.y);
             minX = Mathf.Min(minX, point.x);

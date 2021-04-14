@@ -167,6 +167,8 @@
     <Compile Include="Assets\Skripte\Save\SaveLoadEvent.cs" />
     <Compile Include="Assets\Skripte\Save\SaveLoadStation.cs" />
     <Compile Include="Assets\Skripte\Save\SavingEnvironment.cs" />
+    <Compile Include="Assets\Skripte\Shader\FadeInFadeOutController.cs" />
+    <Compile Include="Assets\Skripte\TestRaycast.cs" />
     <Compile Include="Assets\Skripte\Tiles\GridManager.cs" />
     <Compile Include="Assets\Skripte\Tiles\Test.cs" />
     <Compile Include="Assets\Skripte\Tiles\TileMapMeta.cs" />

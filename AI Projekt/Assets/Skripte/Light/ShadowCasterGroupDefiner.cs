@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(CompositeCollider2D), typeof(OnEnterExitEvent))]
+[RequireComponent(typeof(CompositeCollider2D))]
 public class ShadowCasterGroupDefiner : MonoBehaviour
 {
+    public ShadowCasterProfileTag startUpTag;
     private CompositeCollider2D compositeCollider;
     [SerializeField] ShadowCasterGroup[] shadowCasterGroups;
     private List<ShadowCasterProfile> profiles;
@@ -16,12 +17,9 @@ public class ShadowCasterGroupDefiner : MonoBehaviour
         compositeCollider = GetComponent<CompositeCollider2D>();
         CreateShadowCasters(compositeCollider);
         SetUpProfiles();
-        events.onExit += delegate { SetProfileActivity(ShadowCasterProfileTag.InsideRoom, false); };
-        events.onEnter += delegate { SetProfileActivity(ShadowCasterProfileTag.OutsideRoom, false); };
-        events.onEnter += delegate { SetProfileActivity(ShadowCasterProfileTag.InsideRoom, true); };
-        events.onExit += delegate { SetProfileActivity(ShadowCasterProfileTag.OutsideRoom, true); };
-        SetProfileActivity(ShadowCasterProfileTag.OutsideRoom, true);
-        SetProfileActivity(ShadowCasterProfileTag.InsideRoom, false);
+        events.onEnter += delegate { SetProfileActive(ShadowCasterProfileTag.InsideRoom); };
+        events.onExit += delegate { SetProfileActive(ShadowCasterProfileTag.OutsideRoom); };
+        SetProfileActive(startUpTag);
     }
 
     private void SetUpProfiles()
@@ -49,15 +47,18 @@ public class ShadowCasterGroupDefiner : MonoBehaviour
         }
     }
 
-    public void SetProfileActivity(ShadowCasterProfileTag tag, bool isActive)
+    public void SetProfileActive(ShadowCasterProfileTag tag)
     {
+        ShadowCasterProfile foundProfile = null;
         foreach (ShadowCasterProfile profile in profiles)
         {
             if (tag == profile.Tag)
-            {
-                profile.SetShadowCasterActivity(isActive);
-            }
+                foundProfile = profile;
+            else
+                profile.SetShadowCasterActivity(false);
         }
+        if (foundProfile!=null)
+            foundProfile.SetShadowCasterActivity(true);
     }
 }
 

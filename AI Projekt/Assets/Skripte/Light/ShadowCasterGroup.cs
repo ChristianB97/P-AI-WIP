@@ -33,7 +33,6 @@ public class ShadowCasterGroup
                 pointsInPath3D.Add(pointsInPath[j]);
                 
             }
-            Debug.Log("my i: " + i);
             switch (type)
             {
                 case ShadowCasterType.lowerWall:
