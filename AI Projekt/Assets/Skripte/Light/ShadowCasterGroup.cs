@@ -10,14 +10,15 @@ public class ShadowCasterGroup
 {
     [SerializeField] private ShadowCasterType type;
     [SerializeField] private List<ShadowCasterProfileTag> profileTags;
-    private ShadowCaster2D shadowCaster;
+    private List<ShadowCaster2D> shadowCasters;
 
     public void CreateShadowCaster(CompositeCollider2D collider)
     {
-        if (shadowCaster != null)
-        {
-            GameObject.Destroy(shadowCaster.gameObject);
-        }
+        if (shadowCasters != null)
+            foreach (ShadowCaster2D shadowCaster in shadowCasters)
+                GameObject.Destroy(shadowCaster.gameObject);
+
+        shadowCasters = new List<ShadowCaster2D>();
         ShadowCasterWallAdder adder = new ShadowCasterWallAdder();
 
         int pathCount = collider.pathCount;
@@ -36,19 +37,19 @@ public class ShadowCasterGroup
             switch (type)
             {
                 case ShadowCasterType.lowerWall:
-                    shadowCaster = adder.AddLowerWall(pointsInPath3D, collider);
+                    shadowCasters.Add(adder.AddLowerWall(pointsInPath3D, collider));
                     break;
                 case ShadowCasterType.upperWall:
-                    shadowCaster = adder.AddUpperWall(pointsInPath3D, collider);
+                    shadowCasters.Add(adder.AddUpperWall(pointsInPath3D, collider));
                     break;
                 case ShadowCasterType.rightWall:
-                    shadowCaster = adder.AddRightWall(pointsInPath3D, collider);
+                    shadowCasters.Add(adder.AddRightWall(pointsInPath3D, collider));
                     break;
                 case ShadowCasterType.leftWall:
-                    shadowCaster = adder.AddLeftWall(pointsInPath3D, collider);
+                    shadowCasters.Add(adder.AddLeftWall(pointsInPath3D, collider));
                     break;
                 case ShadowCasterType.filledWall:
-                    shadowCaster = adder.AddFillInWall(pointsInPath3D, collider);
+                    shadowCasters.Add(adder.AddFillInWall(pointsInPath3D, collider));
                     break;
             }
             
@@ -60,9 +61,9 @@ public class ShadowCasterGroup
         return profileTags.Contains(tag);
     }
 
-    public ShadowCaster2D GetShadowCaster()
+    public List<ShadowCaster2D> GetShadowCaster()
     {
-        return shadowCaster;
+        return shadowCasters;
     }
 }
 

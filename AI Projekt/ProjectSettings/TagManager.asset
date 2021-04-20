@@ -45,15 +45,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: No Local Lights
-    uniqueID: 2718654909
+  - name: Ground
+    uniqueID: 92336105
     locked: 0
-  - name: Player
-    uniqueID: 3609099603
+  - name: InsideRoomView/Light
+    uniqueID: 1696490187
     locked: 0
-  - name: Y_Sorting_Layer
-    uniqueID: 667457795
+  - name: InsideRoomView/NoLight
+    uniqueID: 155770363
+    locked: 0
+  - name: OutsideRoomView
+    uniqueID: 299408125
+    locked: 0
+  - name: Character
+    uniqueID: 3911905259
     locked: 0
   - name: Roof
-    uniqueID: 597337091
+    uniqueID: 1257535033
     locked: 0

@@ -159,7 +159,6 @@
     <Compile Include="Assets\Skripte\Light\ShadowCasterInitiator.cs" />
     <Compile Include="Assets\Skripte\Light\ShadowCasterProfile.cs" />
     <Compile Include="Assets\Skripte\Light\ShadowCasterWallAdder.cs" />
-    <Compile Include="Assets\Skripte\Light\StringMultipleMasksAttribute.cs" />
     <Compile Include="Assets\Skripte\Light\Tag.cs" />
     <Compile Include="Assets\Skripte\Light\TagDefiner.cs" />
     <Compile Include="Assets\Skripte\Light\TileMapLayerSwitch.cs" />
@@ -422,6 +421,12 @@
     </Reference>
     <Reference Include="Zenject-usage">
       <HintPath>D:/IONOS HiDrive/Projekt/P-AI/AI Projekt/Assets/Plugins/Zenject/Source/Usage/Zenject-usage.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.24f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.24f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.24f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

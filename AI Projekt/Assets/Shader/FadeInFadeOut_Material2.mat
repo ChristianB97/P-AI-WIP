@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: InnerWall_Transition_Material
+  m_Name: FadeInFadeOut_Material2
   m_Shader: {fileID: -6465566751694194690, guid: 538b817106690e94288a555136eb93c8,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA

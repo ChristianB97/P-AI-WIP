@@ -14,9 +14,12 @@ public class ShadowCasterProfile
         Tag = _tag;
     }
 
-    public void AddShadowCaster(ShadowCaster2D shadowCaster)
+    public void AddShadowCaster(List<ShadowCaster2D> _shadowCasters)
     {
-        shadowCasters.Add(shadowCaster);
+        foreach (ShadowCaster2D shadowCaster in _shadowCasters)
+        {
+            shadowCasters.Add(shadowCaster);
+        }
     }
 
     public void SetShadowCasterActivity(bool value)
