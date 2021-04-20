@@ -108,6 +108,7 @@
     <Compile Include="Assets\Skripte\CameraFollow.cs" />
     <Compile Include="Assets\Skripte\Character\CharacterFacing.cs" />
     <Compile Include="Assets\Skripte\Character\FrontTileMarker.cs" />
+    <Compile Include="Assets\Skripte\Character\PlayerRecognizer.cs" />
     <Compile Include="Assets\Skripte\Character\Player_Walk.cs" />
     <Compile Include="Assets\Skripte\Character\TileInteractionController.cs" />
     <Compile Include="Assets\Skripte\DayCycle\CameraRenderWithShader.cs" />
