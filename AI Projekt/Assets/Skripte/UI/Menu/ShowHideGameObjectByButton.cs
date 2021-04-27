@@ -11,7 +11,7 @@ public class ShowHideGameObjectByButton : MonoBehaviour
         if (Input.GetButtonDown(button))
         {
             print("pressed");
-            selectedObject.SetActive(!selectedObject.activeSelf);
+            selectedObject.SetActive(!selectedObject.active);
         }
     }
 }
