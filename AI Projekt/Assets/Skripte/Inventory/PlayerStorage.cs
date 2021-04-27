@@ -39,8 +39,7 @@ public class PlayerStorage : Inventory_Storage
         OnItemFocusUpdated?.Invoke();
     }
 
-    public int GetFocusedSlotNumber()
-    {
+    public int GetFocusedSlotNumber() {
         return focusedSlotNumber;
     }
 }

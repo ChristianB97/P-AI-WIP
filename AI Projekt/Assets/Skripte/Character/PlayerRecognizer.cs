@@ -6,6 +6,7 @@ public class PlayerRecognizer : MonoBehaviour
 {
     public Transform playerTarget;
     public LineRenderer lineRenderer;
+    public LayerMask maske;
 
     private void Start()
     {
@@ -16,6 +17,7 @@ public class PlayerRecognizer : MonoBehaviour
         lineRenderer.sortingLayerName = "Roof";
         lineRenderer.startWidth = 0.2f;
         lineRenderer.endWidth = 0.5f;
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,8 +39,24 @@ public class PlayerRecognizer : MonoBehaviour
     {
         if (playerTarget)
         {
-            lineRenderer.SetPosition(0, gameObject.transform.position);
-            lineRenderer.SetPosition(1, playerTarget.position);
+            if (Physics2D.Linecast(gameObject.transform.position, playerTarget.position, maske))
+            {
+                if (lineRenderer.enabled)
+                {
+                    lineRenderer.enabled = false;
+                }
+            }
+            else
+            {
+                if (!lineRenderer.enabled)
+                {
+                    lineRenderer.enabled = true;
+                }
+                lineRenderer.SetPosition(0, gameObject.transform.position);
+                lineRenderer.SetPosition(1, playerTarget.position);
+            }
+
         }
+
     }
 }
