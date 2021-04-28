@@ -15,12 +15,13 @@ MonoBehaviour:
   speech:
     name: "B\xF6\xDFer Iwan"
     speech:
-    - "B\xF6\xF6\xF6\xF6\xF6\xF6\xF6\xDFe!"
-  children: []
+    - Niemand entkommt meinen Blicken
+  children:
+  - d74075ef-0d94-4e90-822d-a80203087ca7
   usedRect:
     serializedVersion: 2
-    x: 647
-    y: 25
+    x: 476
+    y: 69
     width: 200
     height: 100
   popUpId: 4
@@ -63,13 +64,13 @@ MonoBehaviour:
   speech:
     name: "B\xF6\xDFer Iwan"
     speech:
-    - "Ich bin ein Elementarmagier und bin b\xF6\xF6\xF6\xF6\xDFe!"
+    - Ich schiebe wache uWu
   children:
   - d3e73edc-fa48-4097-bdb9-80ea9e2d5964
   usedRect:
     serializedVersion: 2
-    x: 77
-    y: 134
+    x: 773
+    y: 343
     width: 200
     height: 100
   popUpId: 4
@@ -88,18 +89,13 @@ MonoBehaviour:
   speech:
     name: Toboto
     speech:
-    - Alles okay mit dir Bruddi? Du machst mir echt Angst!
-    - "Schl\xE4fst du genug?"
-    - "Schl\xE4fst du genug?"
-    - "Schl\xE4fst du genug?"
-    - "Schl\xE4fst du genug?"
+    - Ich bin stolz
   children:
   - 96593cbc-51dd-44f7-a536-a5141de56bbd
-  - 9194d25c-bf31-470b-9fda-e8aa96119fbb
   usedRect:
     serializedVersion: 2
-    x: 383
-    y: 117
+    x: 162
+    y: 230
     width: 200
     height: 100
   popUpId: 5
@@ -119,5 +115,4 @@ MonoBehaviour:
   - {fileID: -7151546807482135020}
   - {fileID: -3606201219883388549}
   - {fileID: -7446299654917681421}
-  - {fileID: -7439135873404739986}
   dialogueCharacters: {fileID: 11400000, guid: ff9d68e570f1edf4a8782e66806b600c, type: 2}

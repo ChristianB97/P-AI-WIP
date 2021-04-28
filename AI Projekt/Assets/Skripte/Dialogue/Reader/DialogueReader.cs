@@ -1,33 +1,42 @@
 ﻿using UnityEngine;
 using Dialogue;
+using TMPro;
 
-public class DialogueReader : MonoBehaviour
+public class DialogueReader
 {
-    public DialogueUI dialogueUI;
-    private DialogueReaderIteration iterator;
+    public TextMeshPro textMeshPro;
+    public DialogueReaderIteration iterator;
     public bool IsDialogue { private set; get; }
     public Dialogue.Dialogue dialogue;
-    public float maxCharTime;
+    public float maxCharTime = 0.1f;
     private float currCharTime;
+    public float maxPauseTime = 2f;
+    private float currPauseTime;
 
-    void Start()
+    public DialogueReader(TextMeshPro _textMeshPro)
     {
+        textMeshPro = _textMeshPro;
         iterator = new DialogueReaderIteration();
-        iterator.onNewActor += UpdateCharacterUI;
-        iterator.onNewText += UpdateTextUI;
-        if (dialogueUI == null)
-            dialogueUI = FindObjectOfType<DialogueUI>();
-        else
-            print("No DialogeUI is attached in this scene");
-        StartDialog(dialogue);
     }
 
-    private void Update()
+    public void UpdateDialogue(float deltaTime)
     {
-        if (IsDialogue && !iterator.IsEndOfStringIteration())
+        if (IsUpdateable())
         {
             if (currCharTime < maxCharTime)
-                currCharTime += Time.deltaTime;
+                currCharTime += deltaTime;
+            else if (iterator.IsEndOfStringIteration())
+            {
+                if (currPauseTime < maxPauseTime)
+                    currPauseTime += deltaTime;
+                else
+                {
+                    textMeshPro.text = "";
+                    currPauseTime = 0;
+                    iterator.Iterate();
+                }
+                    
+            }
             else
             {
                 AddCharacterToUI();
@@ -36,31 +45,26 @@ public class DialogueReader : MonoBehaviour
         }
     }
 
+    public bool IsUpdateable()
+    {
+        return IsDialogue;
+    }
+
     private void AddCharacterToUI()
     {
         char character = iterator.GetCharAndIterateString();
-        dialogueUI.AddCharToText(character);
+        textMeshPro.text += character;
         if (character == ' ')
         {
             character = iterator.GetCharAndIterateString();
-            dialogueUI.AddCharToText(character);
+            textMeshPro.text += character;
         }
     }
 
-    private void UpdateCharacterUI(string character)
+    public void SetDialog(IDialogueGetter _dialogue)
     {
-        dialogueUI.SetCharacterNameText(character);
-    }
-
-    private void UpdateTextUI(string text)
-    {
-        dialogueUI.SetDialogueText(text);
-    }
-
-    public void StartDialog(IDialogueGetter _dialogue)
-    {
-        dialogueUI.SwitchDialogueUI(true);
-        dialogueUI.ResetUI();
+        textMeshPro.enabled = true;
+        textMeshPro.text = "";
         iterator.PrepareDialogueObject(_dialogue);
         currCharTime = maxCharTime;
         IsDialogue = true;
@@ -75,7 +79,7 @@ public class DialogueReader : MonoBehaviour
 
     private void EndDialog()
     {
-        dialogueUI.SwitchDialogueUI(false);
+        textMeshPro.enabled = false;
         IsDialogue = false;
     }
 }

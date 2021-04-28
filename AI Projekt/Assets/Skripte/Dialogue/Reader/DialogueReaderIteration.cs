@@ -44,13 +44,7 @@ public class DialogueReaderIteration
 
     public bool Iterate()
     {
-        if (!stringIterator.IsEndOfString())
-        {
-            string speech = stringIterator.EndIterationAndGetString();
-            onNewText?.Invoke(speech);
-            return true;
-        }
-        else if (!stringArrayIterator.IsEndOfStringArray())
+        if (!stringArrayIterator.IsEndOfStringArray())
         {
             SetNextString();
             return true;

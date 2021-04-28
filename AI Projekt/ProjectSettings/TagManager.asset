@@ -48,18 +48,21 @@ TagManager:
   - name: Ground
     uniqueID: 92336105
     locked: 0
+  - name: OutsideRoomView
+    uniqueID: 299408125
+    locked: 0
   - name: InsideRoomView/Light
     uniqueID: 1696490187
     locked: 0
   - name: InsideRoomView/NoLight
     uniqueID: 155770363
     locked: 0
-  - name: OutsideRoomView
-    uniqueID: 299408125
-    locked: 0
   - name: Character
     uniqueID: 3911905259
     locked: 0
   - name: Roof
     uniqueID: 1257535033
+    locked: 0
+  - name: Text
+    uniqueID: 2506887081
     locked: 0

@@ -24,6 +24,7 @@ public class StringIterator
     {
         currentString = value;
         currentSpot = 0;
+        Debug.Log(value);
     }
 
     public bool IsEndOfString()
