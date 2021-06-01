@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class DialogueCharacterProfile
+[CreateAssetMenu(fileName = "CharacterProfile", menuName = "DialogueCreation/CharacterProfile")]
+public class DialogueCharacterProfile : ScriptableObject
 {
     public int id;
-    public string name;
+    public string characterName;
     public Sprite picture;
     public Color color;
     //talking Sound

@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-118464630357268123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea6a8bf3b82958498fcd585c4693b0f, type: 3}
+  m_Name: 51af6b4e-ed52-4f53-a960-18772575e96e
+  m_EditorClassIdentifier: 
+  speech:
+    name: Scientist Hildibrand
+    speech:
+    - Mir geht es gut
+  children:
+  - 7ac2250c-ccfc-4bd9-b76c-e76c8538a957
+  usedRect:
+    serializedVersion: 2
+    x: 942
+    y: 108
+    width: 200
+    height: 100
+  popUpId: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cef571a80e941d45b32cdc07f61f0fd, type: 3}
+  m_Name: Dialog
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 6238242504930723677}
+  - {fileID: -118464630357268123}
+  - {fileID: 6502013742545631949}
+  characterProfiles:
+  - {fileID: 11400000, guid: b8b41686076e94a42af76788f2481179, type: 2}
+  - {fileID: 11400000, guid: 98b732037a5eecf4291d040859723315, type: 2}
+--- !u!114 &6238242504930723677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea6a8bf3b82958498fcd585c4693b0f, type: 3}
+  m_Name: 9debc256-c115-4834-976a-06f0f00eb9a2
+  m_EditorClassIdentifier: 
+  speech:
+    name: Scientist Hildibrand
+    speech:
+    - Hallo
+  children:
+  - 51af6b4e-ed52-4f53-a960-18772575e96e
+  usedRect:
+    serializedVersion: 2
+    x: 299
+    y: 120
+    width: 200
+    height: 100
+  popUpId: 0
+--- !u!114 &6502013742545631949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea6a8bf3b82958498fcd585c4693b0f, type: 3}
+  m_Name: 7ac2250c-ccfc-4bd9-b76c-e76c8538a957
+  m_EditorClassIdentifier: 
+  speech:
+    name: Scientist Hildibrand
+    speech:
+    - Wie geht es dir?
+  children:
+  - 9debc256-c115-4834-976a-06f0f00eb9a2
+  usedRect:
+    serializedVersion: 2
+    x: 586
+    y: 408
+    width: 200
+    height: 100
+  popUpId: 0

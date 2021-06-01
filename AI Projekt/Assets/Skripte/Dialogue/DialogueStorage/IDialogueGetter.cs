@@ -8,4 +8,6 @@ public interface IDialogueGetter
     IEnumerable<INodeGetter> GetAllNodesGetter();
     INodeGetter GetRootNodeGetter();
     List<INodeGetter> GetAllChildrenGetter(INodeGetter parentNode);
+
+    List<DialogueCharacterProfile> GetCharacterProfiles();
 }

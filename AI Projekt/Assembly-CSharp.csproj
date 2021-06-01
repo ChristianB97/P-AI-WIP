@@ -107,6 +107,7 @@
     <Compile Include="Assets\Skripte\BoolValue.cs" />
     <Compile Include="Assets\Skripte\CameraFollow.cs" />
     <Compile Include="Assets\Skripte\Character\CharacterFacing.cs" />
+    <Compile Include="Assets\Skripte\Character\ControlActions\IControl.cs" />
     <Compile Include="Assets\Skripte\Character\FrontTileMarker.cs" />
     <Compile Include="Assets\Skripte\Character\PlayerRecognizer.cs" />
     <Compile Include="Assets\Skripte\Character\Player_Walk.cs" />
@@ -125,11 +126,14 @@
     <Compile Include="Assets\Skripte\Dialogue\DialogueStorage\Speech.cs" />
     <Compile Include="Assets\Skripte\Dialogue\Reader\DialogueObjectIterator.cs" />
     <Compile Include="Assets\Skripte\Dialogue\Reader\DialogueReader.cs" />
-    <Compile Include="Assets\Skripte\Dialogue\Reader\DialogueReaderInput.cs" />
-    <Compile Include="Assets\Skripte\Dialogue\Reader\DialogueReaderIteration.cs" />
+    <Compile Include="Assets\Skripte\Dialogue\Reader\DialogueSession.cs" />
+    <Compile Include="Assets\Skripte\Dialogue\Reader\DialogueSessionContainer.cs" />
+    <Compile Include="Assets\Skripte\Dialogue\Reader\DialogueSessionParticipant.cs" />
+    <Compile Include="Assets\Skripte\Dialogue\Reader\Metronome.cs" />
     <Compile Include="Assets\Skripte\Dialogue\Reader\NPCDialogue.cs" />
     <Compile Include="Assets\Skripte\Dialogue\Reader\StringArrayIterator.cs" />
     <Compile Include="Assets\Skripte\Dialogue\Reader\StringIterator.cs" />
+    <Compile Include="Assets\Skripte\Dialogue\Reader\UnifiedDialogueIterator.cs" />
     <Compile Include="Assets\Skripte\Geheimskript.cs" />
     <Compile Include="Assets\Skripte\Imported Scripts\AnimatedTile.cs" />
     <Compile Include="Assets\Skripte\Imported Scripts\RandomBrush.cs" />
@@ -166,6 +170,7 @@
     <Compile Include="Assets\Skripte\Light\TagDefiner.cs" />
     <Compile Include="Assets\Skripte\Light\TileMapLayerSwitch.cs" />
     <Compile Include="Assets\Skripte\OnEnterExitEvent.cs" />
+    <Compile Include="Assets\Skripte\Pathfinding\PathPoint.cs" />
     <Compile Include="Assets\Skripte\Save\SaveLoadEvent.cs" />
     <Compile Include="Assets\Skripte\Save\SaveLoadStation.cs" />
     <Compile Include="Assets\Skripte\Save\SavingEnvironment.cs" />

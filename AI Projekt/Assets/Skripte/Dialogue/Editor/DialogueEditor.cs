@@ -140,10 +140,18 @@ namespace Dialogue.Editor
 
         private void DrawPopUp(DialogueNode node)
         {
-            if (selectedDialogue.dialogueCharacters)
+            if (selectedDialogue.characterProfiles.Count > 0)
             {
-                CheckAndFixCorruptPopupID(node);
-                string[] characterNames = selectedDialogue.dialogueCharacters.characterNames;
+                string[] characterNames = new string[selectedDialogue.characterProfiles.Count];
+                for (int i = 0; i < selectedDialogue.characterProfiles.Count; i++)
+                {
+                    if (selectedDialogue.characterProfiles[i] != null)
+                    {
+                        characterNames[i] = selectedDialogue.characterProfiles[i].characterName;
+                    }
+                }
+                CheckAndFixCorruptPopupID(node, characterNames);
+
                 node.SetPopUpId(EditorGUILayout.Popup(node.GetPopUpId(), characterNames));
                 if (node.GetPopUpId() >= 0)
                 {
@@ -153,13 +161,10 @@ namespace Dialogue.Editor
             }
         }
 
-        private void CheckAndFixCorruptPopupID(DialogueNode node)
+        private void CheckAndFixCorruptPopupID(DialogueNode node, string[] characterNames)
         {
-            string[] characterNames = selectedDialogue.dialogueCharacters.characterNames;
             if (characterNames.Length <= node.GetPopUpId())
                 node.SetPopUpId(characterNames.Length - 1);
-            if (node.GetPopUpId() >= 0 && node.GetSpeechGetter().GetName() != characterNames[node.GetPopUpId()])
-                node.SetPopUpId(selectedDialogue.dialogueCharacters.GetIdByNameElseCreateName(node.GetSpeechGetter().GetName()));
         }
 
         private DialogueNode DrawButtons(DialogueNode node)

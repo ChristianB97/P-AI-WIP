@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using Dialogue;
+using UnityEngine;
 
 public class DialogueObjectIterator
 {
     private INodeGetter currentNode;
     private IDialogueGetter currentDialogue;
 
-    public string[] GetNextNodeBySequenceNumber(int sequenceNumber)
+    public string[] GetNextNodeBySequenceNumberAndSetItAsCurrent(int sequenceNumber)
     {
         if (!IsEndOfDialogue()&&currentNode!=null)
         {

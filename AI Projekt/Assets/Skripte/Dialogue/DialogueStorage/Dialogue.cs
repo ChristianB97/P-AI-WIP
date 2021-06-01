@@ -11,15 +11,14 @@ namespace Dialogue
     {
         [SerializeField] List<DialogueNode> nodes = new List<DialogueNode>();
         Dictionary<string, DialogueNode> nodeLookup;
-        public DialogueCharacters dialogueCharacters;
+        //public DialogueCharacters dialogueCharacters;
+        public List<DialogueCharacterProfile> characterProfiles = new List<DialogueCharacterProfile>();
 
-#if UNITY_EDITOR
         private void Awake()
         {
 
             OnValidate();
         }
-#endif
 
         public void OnValidate()
         {
@@ -144,9 +143,16 @@ namespace Dialogue
         {
             List<INodeGetter> result = new List<INodeGetter>();
             foreach (string childID in parentNode.GetChildren())
+            {
                 if (nodeLookup.ContainsKey(childID))
                     result.Add(nodeLookup[childID]);
+            }
             return result;
+        }
+
+        public List<DialogueCharacterProfile> GetCharacterProfiles()
+        {
+            return characterProfiles;
         }
     }
 }

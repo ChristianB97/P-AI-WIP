@@ -2,31 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Dialogue;
 
 public class NPCDialogue : MonoBehaviour
 {
-    public TextMeshPro textMeshPro;
-    private DialogueReader reader;
-    public Dialogue.Dialogue dialogue;
+    [SerializeField]private DialogueSessionContainer sessionContainer;
+    [SerializeField]private TextMeshPro tmpro;
+    [SerializeField] private Dialogue.Dialogue dialogue;
+    [SerializeField] private DialogueCharacterProfile profile;
 
     private void Start()
     {
-        reader = new DialogueReader(textMeshPro);
-        StartDialogue(dialogue);
-
+        sessionContainer.CreateSession("faulheit", dialogue);
+        sessionContainer.JoinSession("faulheit", "Dieter", tmpro, profile);
     }
 
-    private void Update()
-    {
-        if (reader.IsUpdateable())
-        {
-            reader.UpdateDialogue(Time.deltaTime);
-        }
-    }
-
-    public void StartDialogue(Dialogue.Dialogue _dialogue)
-    {
-        reader.SetDialog(_dialogue);
-    }
 }
