@@ -14,11 +14,19 @@ public class PathPoint : MonoBehaviour
             {
                 if (pathpoint != null)
                 {
-                    for (float i = -lineThickness; i <= lineThickness; i+=0.01f)
+                    for (float i = -lineThickness; i <= lineThickness; i+=0.001f)
                     {
                         Gizmos.color = Color.red;
-                        Gizmos.DrawLine(new Vector3(transform.position.x+i, transform.position.y+i, transform.position.z), 
-                            new Vector3(pathpoint.transform.position.x+i, pathpoint.transform.position.y+i, pathpoint.transform.position.z));
+
+                  
+                        Gizmos.DrawLine(new Vector3(transform.position.x + i, transform.position.y, transform.position.z),
+                            new Vector3(pathpoint.transform.position.x + i, pathpoint.transform.position.y, pathpoint.transform.position.z));
+
+                        Gizmos.DrawLine(new Vector3(transform.position.x, transform.position.y + i, transform.position.z),
+                            new Vector3(pathpoint.transform.position.x, pathpoint.transform.position.y + i, pathpoint.transform.position.z));
+
+
+
                     }
                     
                 }

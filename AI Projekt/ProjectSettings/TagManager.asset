@@ -18,10 +18,10 @@ TagManager:
   - 
   - 
   - Ignore Light
-  - Obstacle
-  - 
-  - 
-  - 
+  - Wall
+  - NPC
+  - NPC_Obstacle
+  - Player
   - 
   - 
   - 
@@ -57,8 +57,17 @@ TagManager:
   - name: InsideRoomView/NoLight
     uniqueID: 155770363
     locked: 0
-  - name: Character
+  - name: ObjectLower
+    uniqueID: 1251129227
+    locked: 0
+  - name: CharacterLower
     uniqueID: 3911905259
+    locked: 0
+  - name: ObjectUpper
+    uniqueID: 207489091
+    locked: 0
+  - name: CharacterUpper
+    uniqueID: 2434817955
     locked: 0
   - name: Roof
     uniqueID: 1257535033

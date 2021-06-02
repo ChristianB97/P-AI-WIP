@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerRecognizer : MonoBehaviour
 {
-    public Transform playerTarget;
+    public string target;
+    private Transform currentTargetTransform;
     public LineRenderer lineRenderer;
     public LayerMask maske;
+    public Action<Transform> onTargetFound;
+    public Action onTargetLost;
 
     private void Start()
     {
@@ -24,22 +28,27 @@ public class PlayerRecognizer : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            playerTarget = collision.transform;
+            currentTargetTransform = collision.transform;
             lineRenderer.enabled = true;
+            onTargetFound?.Invoke(currentTargetTransform);
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        playerTarget = null;
-        lineRenderer.enabled = false;
+        if (collision.CompareTag("Player"))
+        {
+            currentTargetTransform = null;
+            lineRenderer.enabled = false;
+            onTargetLost?.Invoke();
+        }
     }
 
     private void Update()
     {
-        if (playerTarget)
+        if (currentTargetTransform)
         {
-            if (Physics2D.Linecast(gameObject.transform.position, playerTarget.position, maske))
+            if (Physics2D.Linecast(gameObject.transform.position, currentTargetTransform.position, maske))
             {
                 if (lineRenderer.enabled)
                 {
@@ -53,7 +62,7 @@ public class PlayerRecognizer : MonoBehaviour
                     lineRenderer.enabled = true;
                 }
                 lineRenderer.SetPosition(0, gameObject.transform.position);
-                lineRenderer.SetPosition(1, playerTarget.position);
+                lineRenderer.SetPosition(1, currentTargetTransform.position);
             }
 
         }
